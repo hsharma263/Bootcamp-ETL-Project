@@ -20,6 +20,7 @@ CREATE TABLE geoplaces (
     alcohol VARCHAR(255)   NOT NULL,
     smoking_area VARCHAR(255)   NOT NULL,
     accessibility VARCHAR(255)   NOT NULL,
+	ambience VARCHAR(255)   NOT NULL,
     CONSTRAINT pk_geoplaces PRIMARY KEY (placeID)
 );
 
