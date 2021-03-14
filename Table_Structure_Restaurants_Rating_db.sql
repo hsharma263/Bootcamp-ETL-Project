@@ -1,7 +1,8 @@
-﻿CREATE TABLE user_profile (
+﻿
+CREATE TABLE user_profile (
     userID VARCHAR(255)   NOT NULL,
-    latitude DECIMAL(20)   NOT NULL,
-    longitude DECIMAL(20)   NOT NULL,
+    latitude FLOAT  NOT NULL,
+    longitude FLOAT  NOT NULL,
     smoker VARCHAR(255)   NOT NULL,
     drink_level VARCHAR(255)   NOT NULL,
     ambience VARCHAR(255)   NOT NULL,
@@ -13,8 +14,8 @@
 
 CREATE TABLE geoplaces (
     placeID INT   NOT NULL,
-    latitude DECIMAL(20)   NOT NULL,
-    longitude DECIMAL(20)   NOT NULL,
+    latitude FLOAT  NOT NULL,
+    longitude FLOAT  NOT NULL,
     name VARCHAR(255)   NOT NULL,
     city VARCHAR(255)   NOT NULL,
     alcohol VARCHAR(255)   NOT NULL,
@@ -48,4 +49,3 @@ CREATE TABLE parking (
     parking_lot VARCHAR(255)   NOT NULL,
 	CONSTRAINT fk_parking_placeID FOREIGN KEY(placeID) REFERENCES geoplaces (placeID)
 );
-
