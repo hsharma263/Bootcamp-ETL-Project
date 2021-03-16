@@ -61,4 +61,12 @@ GROUP BY geoplaces.placeid, rating.placeid
 ORDER BY SUM(rating.service_rating)
 LIMIT 5;
 
+-- Overall worst service rating restraunts 
+SELECT geoplaces.placeid, geoplaces.name, rating.placeid, SUM(rating.service_rating) AS "Service Rating Sum"
+FROM rating
+INNER JOIN geoplaces ON
+geoplaces.placeid = rating.placeid
+GROUP BY geoplaces.placeid, rating.placeid
+ORDER BY SUM(rating.service_rating)
+LIMIT 5;
 
